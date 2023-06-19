@@ -5,7 +5,6 @@
 https://github.com/infineon/training-modustoolbox-level1-getting-started
 
 download software MTB account
-![](https://hackmd.io/_uploads/ByI79YFwh.png)
 
 或是直接在ECE22A software下載
 !! 要以系統管理員的權限執行，
