@@ -1353,3 +1353,268 @@ int main(void)
 }
 
 ```
+
+## PSoC training - wifi application
+https://github.com/Infineon/training-modustoolbox-level3-wifi/tree/master
+
+![](https://hackmd.io/_uploads/BJqeZQ0vh.png)
+*    Open the Library manager and add the wifi-core-freertos-lwip-mbed and retarget-io libraries
+
+![](https://hackmd.io/_uploads/r1WpWXCP2.png)
+![](https://hackmd.io/_uploads/SkQ1zm0P2.png)
+
+![](https://hackmd.io/_uploads/HkA_pXCw3.png)
+
+```clike=
+#include "cy_pdl.h"
+#include "cyhal.h"
+#include "cybsp.h"
+/* FreeRTOS header files */
+#include "FreeRTOS.h"
+#include "task.h"
+/* Configuration file for Wi-Fi */
+#include "wifi_config.h"
+/* Middleware libraries */
+#include "cy_retarget_io.h"
+#include "cy_wcm.h"
+
+void wifi_connect(void *arg)
+{
+    cy_rslt_t result;
+    cy_wcm_connect_params_t connect_param;
+    cy_wcm_ip_address_t ip_address;
+    uint32_t retry_count;
+
+    /* Configure the interface as a Wi-Fi STA (i.e. Client). */
+    cy_wcm_config_t config = {.interface = CY_WCM_INTERFACE_TYPE_STA};
+
+    /* Initialize the Wi-Fi Connection Manager and return if the operation fails. */
+    result = cy_wcm_init(&config);
+
+    printf("\nWi-Fi Connection Manager initialized.\n\r");
+
+    /* Configure the connection parameters for the Wi-Fi interface. */
+    memset(&connect_param, 0, sizeof(cy_wcm_connect_params_t));
+    memcpy(connect_param.ap_credentials.SSID, WIFI_SSID, sizeof(WIFI_SSID));
+    memcpy(connect_param.ap_credentials.password, WIFI_PASSWORD, sizeof(WIFI_PASSWORD));
+    connect_param.ap_credentials.security = WIFI_SECURITY;
+
+    /* Connect to the Wi-Fi AP. */
+    for (retry_count = 0; retry_count < MAX_WIFI_CONN_RETRIES; retry_count++)
+    {
+        printf("Connecting to Wi-Fi AP '%s'\n\r", connect_param.ap_credentials.SSID);
+        result = cy_wcm_connect_ap(&connect_param, &ip_address);
+
+        if (result == CY_RSLT_SUCCESS)
+        {
+            printf("Successfully connected to Wi-Fi network '%s'.\n\r",
+                    connect_param.ap_credentials.SSID);
+            break;
+        }
+    }
+
+    for(;;)
+    {
+    	if(result == CY_RSLT_SUCCESS)
+    	{
+    		/* Turn on LED and exit */
+    		cyhal_gpio_write(CYBSP_USER_LED,CYBSP_LED_STATE_ON);
+    		vTaskDelete(NULL);
+    	}
+    	else
+    	{
+    		cyhal_gpio_toggle(CYBSP_USER_LED);
+    		vTaskDelay(100);
+    	}
+    }
+}
+
+int main(void)
+{
+    cy_rslt_t result;
+
+    /* Initialize the device and board peripherals */
+    result = cybsp_init() ;
+    if (result != CY_RSLT_SUCCESS)
+    {
+        CY_ASSERT(0);
+    }
+
+    /* Initialize retarget-io to use the debug UART port. */
+    cy_retarget_io_init(CYBSP_DEBUG_UART_TX, CYBSP_DEBUG_UART_RX, CY_RETARGET_IO_BAUDRATE);
+
+    /* Initaize LED pin */
+    cyhal_gpio_init(CYBSP_USER_LED, CYHAL_GPIO_DIR_OUTPUT, CYHAL_GPIO_DRIVE_STRONG, CYBSP_LED_STATE_OFF);
+
+    __enable_irq();
+
+    /* \x1b[2J\x1b[;H - ANSI ESC sequence to clear screen. */
+	printf("\x1b[2J\x1b[;H");
+	printf("============================================================\n\r");
+	printf("ModusToolbox-Level3-WiFi - 2: Attach\n\r");
+	printf("============================================================\n\n\r");
+
+    /* Create the MQTT Client task. */
+    xTaskCreate(wifi_connect, "wifi_connect_task", 1024, NULL, 5, NULL);
+
+    /* Never Returns */
+    vTaskStartScheduler();
+}
+
+```
+
+### Socket
+
+#### Server API
+![](https://hackmd.io/_uploads/Byxpfqlu3.png)
+
+#### Client API
+![](https://hackmd.io/_uploads/B1Xy79l_n.png)
+
+## PSoC training - Machine Learning
+
+### Cyberon
+https://github.com/Infineon/training-modustoolbox-level3-machine-learning
+
+#### CM0與CM4的差別
+![](https://hackmd.io/_uploads/r1I-7Oruh.png)
+
+CM0的application就是在CM0的CPU上跑語音辨識，而在CM4的application上面留給user自己玩。
+
+隨便燒一個image去板子開uart會看到板子的unique id，需要根據這個id去註冊liscense才可以使用這個software。
+
+![](https://hackmd.io/_uploads/SkAjrOSdn.png)
+到這個網站去拿到License:
+https://license.cyberon.tw/InfineonDSpotterLicense/InfineonDSpotterLicense.php
+
+![](https://hackmd.io/_uploads/By-NUuB_n.png)
+就可以收到license寄到信箱。
+![](https://hackmd.io/_uploads/SkbU8_H_n.png)
+
+這個license是device dependent的，不同device間不能共用。
+
+下載license之後改名為:CybLicense.bin放到data的資料夾底下。
+
+==必須要先clean project再rebuild，不然license會吃不到==
+
+#### Custom model
+下載Cyberon software 在雲端了
+帳號:infineon_trial@cyberon.com.tw
+密碼:留白
+
+存完之後，Trigger_and_command_pack_withTxt.bin in data directory with your custom model bin file
+
+在cyberon main.c中需要注意的為這邊:
+```clike=
+while(1)
+{
+    if(pdm_pcm_flag)
+    {
+        pdm_pcm_flag = 0;
+        cyberon_asr_process(pdm_pcm_buffer, FRAME_SIZE);
+    }
+}
+```
+
+而其中重要的部分為cyberon_asr_process這個function，要在這邊設定timeout及偵測到關鍵字後要做的事情。
+```clike=
+void cyberon_asr_process(short *lpsSample, int nNumSample)
+{
+	static INT nCount = 0;
+	INT nErr;
+	char pchBuf[16];
+	char pchCommand[64];
+	INT nCommandID;
+	INT nMapID;
+	INT nConfidenceScore;
+	INT nVolumeEnergy;
+
+	if(!g_hDSpotter)
+		return;
+
+	if(bEnableTimeout && (nCount += nNumSample) > TIMEOUT)
+	{
+		g_lpfnCallback(__func__, "##########Timeout##########", itoa(TIMEOUT, pchBuf, 10));
+		cyhal_gpio_write(CYBSP_USER_LED, CYBSP_LED_STATE_OFF);
+		bEnableTimeout = !bEnableTimeout;
+		g_hDSpotter = DSpotter_Init_Multi((BYTE *)CybModelGetBase(g_hCybModel), (BYTE **)&g_lppbyGroup[0], 1, MAX_TIME, g_lpbyMemPool, g_nMemPool, NULL, 0, &nErr, (BYTE *)&__start_license_data);
+#if ENABLE_AGC
+		DSpotterAGC_Enable(g_hDSpotter);
+#endif
+	}
+
+	if((nErr = DSpotter_AddSample(g_hDSpotter, lpsSample, nNumSample)) == DSPOTTER_SUCCESS)
+	{
+		nCommandID = DSpotter_GetResult(g_hDSpotter);
+		DSpotter_GetResultScore(g_hDSpotter, &nConfidenceScore, NULL, NULL);
+		nVolumeEnergy = DSpotter_GetCmdEnergy(g_hDSpotter);
+
+		if(!bEnableTimeout)
+		{
+			CybModelGetCommandInfo(g_hCybModel, 0, nCommandID, pchCommand, 64, &nMapID, NULL);
+			g_hDSpotter = DSpotter_Init_Multi((BYTE *)CybModelGetBase(g_hCybModel), (BYTE **)&g_lppbyGroup[1], 1, MAX_TIME, g_lpbyMemPool, g_nMemPool, NULL, 0, &nErr, (BYTE *)&__start_license_data);
+#if ENABLE_AGC
+			DSpotterAGC_Enable(g_hDSpotter);
+#endif
+			nCount = 0;
+			bEnableTimeout = !bEnableTimeout;
+		}
+		else
+		{
+			CybModelGetCommandInfo(g_hCybModel, 1, nCommandID, pchCommand, 64, &nMapID, NULL);
+			DSpotter_Continue(g_hDSpotter);
+			nCount = 0;
+		}
+
+#if NOT_SHOW_MULTI_PRONUNCIATION
+		if(strstr(pchCommand, " ^"))
+			strstr(pchCommand, " ^")[0] = '\0';
+#endif
+		g_lpfnCallback(__func__, "**********Result**********", "++");
+		g_lpfnCallback(__func__, "Command", pchCommand);
+		g_lpfnCallback(__func__, "Command ID", itoa(nCommandID, pchBuf, 10));
+		g_lpfnCallback(__func__, "Map ID", itoa(nMapID, pchBuf, 10));
+		g_lpfnCallback(__func__, "Confidence Score", itoa(nConfidenceScore, pchBuf, 10));
+		g_lpfnCallback(__func__, "Volume Energy", itoa(nVolumeEnergy, pchBuf, 10));
+		g_lpfnCallback(__func__, "**************************", "--");
+
+		switch(nMapID){
+		case -1:
+			//awake for the group 1 word
+			cyhal_gpio_write(CYBSP_USER_LED, CYBSP_LED_STATE_ON);
+			break;
+		case 10:
+			cyhal_gpio_write(CYBSP_USER_LED2, CYBSP_LED_STATE_ON);
+			break;
+		case 11:
+			cyhal_gpio_write(CYBSP_USER_LED2, CYBSP_LED_STATE_OFF);
+			break;
+		default:
+			break;
+		}
+	}
+	else if(nErr == DSPOTTER_ERR_Expired)
+	{
+		g_lpfnCallback(__func__, "Upper limit of recognition times is reached", itoa(DSPOTTER_ERR_Expired, pchBuf, 10));
+	}
+}
+```
+
+## Wifi
+幾個重點:
+*    softAP全部刪掉，使用STA
+*    更改WIFI_SSID WIFI_PASSWORD WIFI_SECURITY_TYPE (iphone是WPA
+
+### Ping Google DNS server IP 8.8.8.8 port 53
+```clike=
+cy_wcm_ip_address_t addr_ping;
+addr_ping.version = CY_WCM_IP_VER_V4;
+addr_ping.ip.v4 = 0x08080808;
+uint32_t t_elapsed;
+result = cy_wcm_ping(CY_WCM_INTERFACE_TYPE_STA, &addr_ping, 1000, &t_elapsed);
+if(result == CY_RSLT_SUCCESS){
+    printf("Ping Completed! Elapsed time: %d\n", t_elapsed);
+}
+```
+結果: 有成功ping到他
+![](https://hackmd.io/_uploads/BkkWKRUd3.png)
