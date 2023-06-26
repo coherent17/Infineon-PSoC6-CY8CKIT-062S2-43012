@@ -1,0 +1,11 @@
+#ifndef TCP_CLIENT_H_
+#define TCP_CLIENT_H_
+
+struct ThreadArgs{
+	char *msg;
+	int size;
+};
+
+void tcp_client_task(void *arg);
+
+#endif /* TCP_CLIENT_H_ */

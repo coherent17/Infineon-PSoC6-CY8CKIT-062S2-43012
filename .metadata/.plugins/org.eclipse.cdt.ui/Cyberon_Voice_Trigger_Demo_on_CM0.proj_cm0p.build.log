@@ -1,0 +1,27 @@
+16:21:11 **** Clean-only build of configuration Debug for project Cyberon_Voice_Trigger_Demo_on_CM0.proj_cm0p ****
+"C:\\Users\\mnb51\\ModusToolbox\\tools_3.0\\modus-shell\\bin\\make" CY_MAKE_IDE=eclipse CY_IDE_TOOLS_DIR=C:/Users/mnb51/ModusToolbox/tools_3.0 CY_IDE_BT_TOOLS_DIR= -j8 clean 
+Searching installed tools in progress...
+Searching installed tools complete
+
+
+make[1]: Entering directory '/cygdrive/c/Users/mnb51/mtw/Cyberon_Voice_Trigger_Demo_on_CM0'
+/usr/bin/make -C proj_cm0p clean_proj MTB_APPLICATION_SUBPROJECTS="proj_cm0p proj_cm4" MTB_APPLICATION_NAME="Cyberon_Voice_Trigger_Demo_on_CM0" && /usr/bin/make -C proj_cm4 clean_proj MTB_APPLICATION_SUBPROJECTS="proj_cm0p proj_cm4" MTB_APPLICATION_NAME="Cyberon_Voice_Trigger_Demo_on_CM0" && true
+make[2]: Entering directory '/cygdrive/c/Users/mnb51/mtw/Cyberon_Voice_Trigger_Demo_on_CM0/proj_cm0p'
+Searching installed tools in progress...
+Searching installed tools complete
+
+
+rm -rf C:/Users/mnb51/mtw/Cyberon_Voice_Trigger_Demo_on_CM0/proj_cm0p/build/APP_CY8CKIT-062S2-43012/Debug C:/Users/mnb51/mtw/Cyberon_Voice_Trigger_Demo_on_CM0/proj_cm0p/build/APP_CY8CKIT-062S2-43012/generated
+make[2]: Leaving directory '/cygdrive/c/Users/mnb51/mtw/Cyberon_Voice_Trigger_Demo_on_CM0/proj_cm0p'
+make[2]: Entering directory '/cygdrive/c/Users/mnb51/mtw/Cyberon_Voice_Trigger_Demo_on_CM0/proj_cm4'
+Searching installed tools in progress...
+Searching installed tools complete
+
+
+rm -rf C:/Users/mnb51/mtw/Cyberon_Voice_Trigger_Demo_on_CM0/proj_cm4/build/APP_CY8CKIT-062S2-43012/Debug C:/Users/mnb51/mtw/Cyberon_Voice_Trigger_Demo_on_CM0/proj_cm4/build/APP_CY8CKIT-062S2-43012/generated
+make[2]: Leaving directory '/cygdrive/c/Users/mnb51/mtw/Cyberon_Voice_Trigger_Demo_on_CM0/proj_cm4'
+rm -rf build
+make[1]: Leaving directory '/cygdrive/c/Users/mnb51/mtw/Cyberon_Voice_Trigger_Demo_on_CM0'
+
+16:21:13 Build Finished. 0 errors, 0 warnings. (took 1s.799ms)
+

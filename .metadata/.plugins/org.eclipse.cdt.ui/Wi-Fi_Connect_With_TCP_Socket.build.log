@@ -1,0 +1,11 @@
+14:02:31 **** Clean-only build of configuration Debug for project Wi-Fi_Connect_With_TCP_Socket ****
+"C:\\Users\\mnb51\\ModusToolbox\\tools_3.0\\modus-shell\\bin\\make" CY_MAKE_IDE=eclipse CY_IDE_TOOLS_DIR=C:/Users/mnb51/ModusToolbox/tools_3.0 CY_IDE_BT_TOOLS_DIR= -j8 clean 
+Tools Directory: C:/Users/mnb51/ModusToolbox/tools_3.0
+Searching installed tools in progress...
+Searching installed tools complete
+
+
+rm -rf C:/Users/mnb51/mtw/Wi-Fi_Connect_With_TCP_Socket/build/APP_CY8CKIT-062S2-43012/Debug C:/Users/mnb51/mtw/Wi-Fi_Connect_With_TCP_Socket/build/APP_CY8CKIT-062S2-43012/generated
+
+14:02:32 Build Finished. 0 errors, 0 warnings. (took 700ms)
+
