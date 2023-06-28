@@ -1,0 +1,511 @@
+Loading the ModusToolbox Technology Packs and Early Access Packs
+Finished loading the ModusToolbox Technology Packs and Early Access Packs (0 ms)
+Loading the tools information
+Finished loading the tools information (30 ms)
+directory 'C:/ProgramData/Infineon_Technologies_AG/Infineon-Toolbox' does not exist
+Using the executable path for the tools directory.
+Loading the application in directory 'C:/Users/mnb51/mtw/AlizaRing'
+creating application information from 'get_app_info' data
+finished creating application information from 'get_app_info' data (13 ms)
+Finished loading the application data (446 ms total, 426 make)
+Loading asset repository references
+Finished loading the asset repository references (158 ms)
+Loading the manifest data
+Loading super manfiest files from all sources
+Getting manifests from remote and/or local sources
+Processing system manifest 'https://modustoolbox.infineon.com/manifests/mtb-super-manifest/v2.X/mtb-super-manifest-fv2.xml'
+Downloading super manifest file 'https://modustoolbox.infineon.com/manifests/mtb-super-manifest/v2.X/mtb-super-manifest-fv2.xml'
+Finished loading super manifest files from all sources
+Finished download of file 'https://modustoolbox.infineon.com/manifests/mtb-super-manifest/v2.X/mtb-super-manifest-fv2.xml'
+Starting to parse super manifest with URL 'https://modustoolbox.infineon.com/manifests/mtb-super-manifest/v2.X/mtb-super-manifest-fv2.xml'
+Finished parsing super manifest with URL 'https://modustoolbox.infineon.com/manifests/mtb-super-manifest/v2.X/mtb-super-manifest-fv2.xml'
+Downloading manifest file 'https://github.com/Infineon/mtb-ce-manifest/raw/v2.X/mtb-ce-manifest.xml'
+Downloading manifest file 'https://github.com/Infineon/mtb-ce-manifest/raw/v2.X/mtb-ce-manifest-fv2.xml'
+Downloading manifest file 'https://github.com/Infineon/mtb-bt-app-manifest/raw/v2.X/mtb-bt-app-manifest.xml'
+Downloading manifest file 'https://github.com/Infineon/mtb-bt-app-manifest/raw/v2.X/mtb-bt-app-manifest-fv2.xml'
+Downloading manifest file 'https://github.com/Infineon/cce-app-manifest/raw/v2.X/cce-app-manifest-fv2.xml'
+Downloading manifest file 'https://github.com/Altia-Marketing/altia-ce-manifest/raw/main/altia-ce-manifest-fv2.xml'
+Downloading manifest file 'https://github.com/CyberonEBU/cyberon-mtb-ce-manifest/raw/main/cyberon-mtb-ce-manifest-fv2.xml'
+Downloading manifest file 'https://github.com/edgeimpulse/edgeimpulse-ce-manifest/raw/main/edgeimpulse-ce-manifest-fv2.xml'
+Downloading manifest file 'https://github.com/golioth/mtb-golioth-ce-manifest/raw/main/mtb-golioth-ce-manifest-fv2.xml'
+Downloading manifest file 'https://github.com/memfault/mtb-memfault-ce-manifest/raw/main/mtb-memfault-ce-manifest-fv2.xml'
+Downloading manifest file 'https://github.com/RutronikSystemSolutions/rutronik-ce-manifest/raw/main/rutronik-ce-manifest-fv2.xml'
+Downloading manifest file 'https://github.com/sensiml/sensiml-ce-manifest/raw/main/sensiml-ce-manifest-fv2.xml'
+Downloading manifest file 'https://github.com/Infineon/mtb-bsp-manifest/raw/v2.X/mtb-bsp-manifest.xml'
+Downloading manifest file 'https://github.com/Infineon/mtb-bsp-manifest/raw/v2.X/mtb-bsp-manifest-fv2.xml'
+Downloading manifest file 'https://github.com/Infineon/mtb-bsp-manifest/raw/v2.X/mtb-bsp-dependencies-manifest.xml'
+Downloading manifest file 'https://github.com/Infineon/mtb-bt-bsp-manifest/raw/v2.X/mtb-bt-bsp-manifest.xml'
+Downloading manifest file 'https://github.com/Infineon/mtb-bt-bsp-manifest/raw/v2.X/mtb-bt-bsp-manifest-fv2.xml'
+Downloading manifest file 'https://github.com/Infineon/mtb-bt-bsp-manifest/raw/v2.X/mtb-bt-bsp-dependencies-manifest.xml'
+Downloading manifest file 'https://github.com/RutronikSystemSolutions/rutronik-bsp-manifest/raw/main/rutronik-bsp-manifest-fv2.xml'
+Downloading manifest file 'https://github.com/RutronikSystemSolutions/rutronik-bsp-manifest/raw/main/rutronik-bsp-dependencies-manifest.xml'
+Downloading manifest file 'https://github.com/Infineon/mtb-mw-manifest/raw/v2.X/mtb-mw-manifest.xml'
+Downloading manifest file 'https://github.com/Infineon/mtb-mw-manifest/raw/v2.X/mtb-mw-manifest-fv2.xml'
+Downloading manifest file 'https://github.com/Infineon/mtb-mw-manifest/raw/v2.X/mtb-mw-dependencies-manifest.xml'
+Downloading manifest file 'https://github.com/Infineon/mtb-bt-mw-manifest/raw/v2.X/mtb-bt-mw-manifest.xml'
+Downloading manifest file 'https://github.com/Infineon/mtb-bt-mw-manifest/raw/v2.X/mtb-bt-mw-manifest-fv2.xml'
+Downloading manifest file 'https://github.com/Infineon/mtb-bt-mw-manifest/raw/v2.X/mtb-bt-mw-dependencies-manifest.xml'
+Downloading manifest file 'https://github.com/Infineon/mtb-wifi-mw-manifest/raw/v2.X/mtb-wifi-mw-manifest.xml'
+Downloading manifest file 'https://github.com/Infineon/mtb-wifi-mw-manifest/raw/v2.X/mtb-wifi-mw-manifest-fv2.xml'
+Downloading manifest file 'https://github.com/Infineon/mtb-wifi-mw-manifest/raw/v2.X/mtb-wifi-mw-dependencies-manifest.xml'
+Downloading manifest file 'https://github.com/CyberonEBU/cyberon-mtb-mw-manifest/raw/main/cyberon-mtb-mw-manifest-fv2.xml'
+Downloading manifest file 'https://github.com/golioth/mtb-golioth-mw-manifest/raw/main/mtb-golioth-mw-manifest-fv2.xml'
+Downloading manifest file 'https://github.com/memfault/mtb-memfault-mw-manifest/raw/main/mtb-memfault-mw-manifest-fv2.xml'
+Downloading manifest file 'https://github.com/sensiml/sensiml-mw-manifest/raw/main/sensiml-mw-manifest-fv2.xml'
+Finished download of file 'https://github.com/Infineon/mtb-ce-manifest/raw/v2.X/mtb-ce-manifest.xml'
+Finished download of file 'https://github.com/Infineon/mtb-ce-manifest/raw/v2.X/mtb-ce-manifest-fv2.xml'
+Finished download of file 'https://github.com/Infineon/mtb-bt-app-manifest/raw/v2.X/mtb-bt-app-manifest.xml'
+Finished download of file 'https://github.com/Infineon/mtb-bt-app-manifest/raw/v2.X/mtb-bt-app-manifest-fv2.xml'
+Finished download of file 'https://github.com/Infineon/cce-app-manifest/raw/v2.X/cce-app-manifest-fv2.xml'
+Finished download of file 'https://github.com/Altia-Marketing/altia-ce-manifest/raw/main/altia-ce-manifest-fv2.xml'
+Finished download of file 'https://github.com/CyberonEBU/cyberon-mtb-ce-manifest/raw/main/cyberon-mtb-ce-manifest-fv2.xml'
+Finished download of file 'https://github.com/edgeimpulse/edgeimpulse-ce-manifest/raw/main/edgeimpulse-ce-manifest-fv2.xml'
+Finished download of file 'https://github.com/golioth/mtb-golioth-ce-manifest/raw/main/mtb-golioth-ce-manifest-fv2.xml'
+Finished download of file 'https://github.com/memfault/mtb-memfault-ce-manifest/raw/main/mtb-memfault-ce-manifest-fv2.xml'
+Finished download of file 'https://github.com/RutronikSystemSolutions/rutronik-ce-manifest/raw/main/rutronik-ce-manifest-fv2.xml'
+Finished download of file 'https://github.com/sensiml/sensiml-ce-manifest/raw/main/sensiml-ce-manifest-fv2.xml'
+Finished download of file 'https://github.com/Infineon/mtb-bsp-manifest/raw/v2.X/mtb-bsp-manifest.xml'
+Finished download of file 'https://github.com/Infineon/mtb-bsp-manifest/raw/v2.X/mtb-bsp-manifest-fv2.xml'
+Finished download of file 'https://github.com/Infineon/mtb-bsp-manifest/raw/v2.X/mtb-bsp-dependencies-manifest.xml'
+Finished download of file 'https://github.com/Infineon/mtb-bt-bsp-manifest/raw/v2.X/mtb-bt-bsp-manifest.xml'
+Finished download of file 'https://github.com/Infineon/mtb-bt-bsp-manifest/raw/v2.X/mtb-bt-bsp-manifest-fv2.xml'
+Finished download of file 'https://github.com/Infineon/mtb-bt-bsp-manifest/raw/v2.X/mtb-bt-bsp-dependencies-manifest.xml'
+Finished download of file 'https://github.com/RutronikSystemSolutions/rutronik-bsp-manifest/raw/main/rutronik-bsp-manifest-fv2.xml'
+Finished download of file 'https://github.com/RutronikSystemSolutions/rutronik-bsp-manifest/raw/main/rutronik-bsp-dependencies-manifest.xml'
+Finished download of file 'https://github.com/Infineon/mtb-mw-manifest/raw/v2.X/mtb-mw-manifest.xml'
+Finished download of file 'https://github.com/Infineon/mtb-mw-manifest/raw/v2.X/mtb-mw-manifest-fv2.xml'
+Finished download of file 'https://github.com/Infineon/mtb-mw-manifest/raw/v2.X/mtb-mw-dependencies-manifest.xml'
+Finished download of file 'https://github.com/Infineon/mtb-bt-mw-manifest/raw/v2.X/mtb-bt-mw-manifest.xml'
+Finished download of file 'https://github.com/Infineon/mtb-bt-mw-manifest/raw/v2.X/mtb-bt-mw-manifest-fv2.xml'
+Finished download of file 'https://github.com/Infineon/mtb-bt-mw-manifest/raw/v2.X/mtb-bt-mw-dependencies-manifest.xml'
+Finished download of file 'https://github.com/Infineon/mtb-wifi-mw-manifest/raw/v2.X/mtb-wifi-mw-manifest.xml'
+Finished download of file 'https://github.com/Infineon/mtb-wifi-mw-manifest/raw/v2.X/mtb-wifi-mw-manifest-fv2.xml'
+Finished download of file 'https://github.com/Infineon/mtb-wifi-mw-manifest/raw/v2.X/mtb-wifi-mw-dependencies-manifest.xml'
+Finished download of file 'https://github.com/CyberonEBU/cyberon-mtb-mw-manifest/raw/main/cyberon-mtb-mw-manifest-fv2.xml'
+Finished download of file 'https://github.com/golioth/mtb-golioth-mw-manifest/raw/main/mtb-golioth-mw-manifest-fv2.xml'
+Finished download of file 'https://github.com/memfault/mtb-memfault-mw-manifest/raw/main/mtb-memfault-mw-manifest-fv2.xml'
+Finished download of file 'https://github.com/sensiml/sensiml-mw-manifest/raw/main/sensiml-mw-manifest-fv2.xml'
+Finished loading the manifest data (4098 ms)
+Loading the device db
+Finished loading the device db (2082 ms)
+Starting to refresh dependencies for project 'cyberon-voice-trigger-and-command-demo-psoc6-cm4'.
+Requested to remove the asset 'cat1cm0p'.
+Requested to remove the asset 'cmsis'.
+Requested to remove the asset 'core-lib'.
+Requested to remove the asset 'core-make'.
+Requested to remove the asset 'mtb-hal-cat1'.
+Requested to remove the asset 'mtb-pdl-cat1'.
+Requested to remove the asset 'recipe-make-cat1a'.
+Requested to add the asset 'cat1cm0p'.
+Requested to add the asset 'core-lib'.
+Requested to add the asset 'core-make'.
+Requested to add the asset 'mtb-hal-cat1'.
+Requested to add the asset 'mtb-pdl-cat1'.
+Requested to add the asset 'recipe-make-cat1a'.
+Requested to add the asset 'cmsis'.
+Found direct dependencies 'cyberon-dspotter-lib-psoc6-cm4, retarget-io'.
+Found new indirect dependencies 'cat1cm0p, core-lib, core-make, mtb-hal-cat1, mtb-pdl-cat1, recipe-make-cat1a, cmsis'.
+Refreshed all dependencies for project 'cyberon-voice-trigger-and-command-demo-psoc6-cm4'.
+0 error(s), 0 warning(s)
+Successfully acquired the information.
+Requested to add the asset 'wifi-core-freertos-lwip-mbedtls'.
+Starting to refresh dependencies for project 'cyberon-voice-trigger-and-command-demo-psoc6-cm4'.
+Requested to remove the asset 'cat1cm0p'.
+Requested to remove the asset 'cmsis'.
+Requested to remove the asset 'core-lib'.
+Requested to remove the asset 'core-make'.
+Requested to remove the asset 'mtb-hal-cat1'.
+Requested to remove the asset 'mtb-pdl-cat1'.
+Requested to remove the asset 'recipe-make-cat1a'.
+Requested to add the asset 'cat1cm0p'.
+Requested to add the asset 'core-lib'.
+Requested to add the asset 'core-make'.
+Requested to add the asset 'mtb-hal-cat1'.
+Requested to add the asset 'mtb-pdl-cat1'.
+Requested to add the asset 'recipe-make-cat1a'.
+Requested to add the asset 'abstraction-rtos'.
+Requested to add the asset 'clib-support'.
+Requested to add the asset 'connectivity-utilities'.
+Requested to add the asset 'mbedTLS Acceleration'.
+Requested to add the asset 'freertos'.
+Requested to add the asset 'lwip-freertos-integration'.
+Requested to add the asset 'lwip-network-interface-integration'.
+Requested to add the asset 'lwip'.
+Requested to add the asset 'mbedtls'.
+Requested to add the asset 'secure-sockets'.
+Requested to add the asset 'whd-bsp-integration'.
+Requested to add the asset 'wifi-connection-manager'.
+Requested to add the asset 'wifi-host-driver'.
+Requested to add the asset 'wpa3-external-supplicant'.
+Requested to add the asset 'cmsis'.
+Found direct dependencies 'cyberon-dspotter-lib-psoc6-cm4, retarget-io, wifi-core-freertos-lwip-mbedtls'.
+Found new indirect dependencies 'cat1cm0p, core-lib, core-make, mtb-hal-cat1, mtb-pdl-cat1, recipe-make-cat1a, abstraction-rtos, clib-support, connectivity-utilities, mbedTLS Acceleration, freertos, lwip-freertos-integration, lwip-network-interface-integration, lwip, mbedtls, secure-sockets, whd-bsp-integration, wifi-connection-manager, wifi-host-driver, wpa3-external-supplicant, cmsis'.
+Refreshed all dependencies for project 'cyberon-voice-trigger-and-command-demo-psoc6-cm4'.
+
+Starting to refresh dependencies for project 'cyberon-voice-trigger-and-command-demo-psoc6-cm4'.
+Requested to remove the asset 'cat1cm0p'.
+Requested to remove the asset 'cmsis'.
+Requested to remove the asset 'core-lib'.
+Requested to remove the asset 'core-make'.
+Requested to remove the asset 'mtb-hal-cat1'.
+Requested to remove the asset 'mtb-pdl-cat1'.
+Requested to remove the asset 'recipe-make-cat1a'.
+Requested to add the asset 'cat1cm0p'.
+Requested to add the asset 'core-lib'.
+Requested to add the asset 'core-make'.
+Requested to add the asset 'mtb-hal-cat1'.
+Requested to add the asset 'mtb-pdl-cat1'.
+Requested to add the asset 'recipe-make-cat1a'.
+Requested to add the asset 'abstraction-rtos'.
+Requested to add the asset 'clib-support'.
+Requested to add the asset 'connectivity-utilities'.
+Requested to add the asset 'mbedTLS Acceleration'.
+Requested to add the asset 'freertos'.
+Requested to add the asset 'lwip-freertos-integration'.
+Requested to add the asset 'lwip-network-interface-integration'.
+Requested to add the asset 'lwip'.
+Requested to add the asset 'mbedtls'.
+Requested to add the asset 'secure-sockets'.
+Requested to add the asset 'whd-bsp-integration'.
+Requested to add the asset 'wifi-connection-manager'.
+Requested to add the asset 'wifi-host-driver'.
+Requested to add the asset 'wpa3-external-supplicant'.
+Requested to add the asset 'cmsis'.
+Found direct dependencies 'cyberon-dspotter-lib-psoc6-cm4, retarget-io, wifi-core-freertos-lwip-mbedtls'.
+Found new indirect dependencies 'cat1cm0p, core-lib, core-make, mtb-hal-cat1, mtb-pdl-cat1, recipe-make-cat1a, abstraction-rtos, clib-support, connectivity-utilities, mbedTLS Acceleration, freertos, lwip-freertos-integration, lwip-network-interface-integration, lwip, mbedtls, secure-sockets, whd-bsp-integration, wifi-connection-manager, wifi-host-driver, wpa3-external-supplicant, cmsis'.
+Refreshed all dependencies for project 'cyberon-voice-trigger-and-command-demo-psoc6-cm4'.
+
+Changelog for project "AlizaRing":
+wifi-core-freertos-lwip-mbedtls version release-v1.0.0 added
+abstraction-rtos version release-v1.7.1 added
+clib-support version release-v1.3.0 added
+connectivity-utilities version release-v4.1.1 added
+mbedTLS Acceleration version release-v1.5.0 added
+freertos version release-v10.4.305 added
+lwip-freertos-integration version release-v1.0.0 added
+lwip-network-interface-integration version release-v1.1.2 added
+lwip version STABLE-2_1_2_RELEASE added
+mbedtls version mbedtls-2.25.0 added
+secure-sockets version release-v3.2.1 added
+whd-bsp-integration version release-v2.2.0 added
+wifi-connection-manager version release-v3.1.0 added
+wifi-host-driver version release-v2.6.0 added
+wpa3-external-supplicant version release-v1.1.0 added
+
+Click "Update" to commit the changesUpdating application "AlizaRing" ...
+Starting to commit changes to the filesystem and project 'cyberon-voice-trigger-and-command-demo-psoc6-cm4'.
+Requested asset 'cyberon-dspotter-lib-psoc6-cm4'.
+Requested asset 'retarget-io'.
+Requested asset 'wifi-core-freertos-lwip-mbedtls'.
+Requested asset 'cat1cm0p'.
+Requested asset 'cmsis'.
+Requested asset 'core-lib'.
+Requested asset 'core-make'.
+Requested asset 'mtb-hal-cat1'.
+Requested asset 'mtb-pdl-cat1'.
+Requested asset 'recipe-make-cat1a'.
+Requested asset 'abstraction-rtos'.
+Requested asset 'clib-support'.
+Requested asset 'connectivity-utilities'.
+Requested asset 'mbedTLS Acceleration'.
+Requested asset 'freertos'.
+Requested asset 'lwip-freertos-integration'.
+Requested asset 'lwip-network-interface-integration'.
+Requested asset 'lwip'.
+Requested asset 'mbedtls'.
+Requested asset 'secure-sockets'.
+Requested asset 'whd-bsp-integration'.
+Requested asset 'wifi-connection-manager'.
+Requested asset 'wifi-host-driver'.
+Requested asset 'wpa3-external-supplicant'.
+Writing mtb file for asset 'wifi-core-freertos-lwip-mbedtls' to the folder 'C:/Users/mnb51/mtw/AlizaRing/deps'.
+Writing mtb file for asset 'abstraction-rtos' to the folder 'C:/Users/mnb51/mtw/AlizaRing/libs'.
+Writing mtb file for asset 'clib-support' to the folder 'C:/Users/mnb51/mtw/AlizaRing/libs'.
+Writing mtb file for asset 'connectivity-utilities' to the folder 'C:/Users/mnb51/mtw/AlizaRing/libs'.
+Writing mtb file for asset 'mbedTLS Acceleration' to the folder 'C:/Users/mnb51/mtw/AlizaRing/libs'.
+Writing mtb file for asset 'freertos' to the folder 'C:/Users/mnb51/mtw/AlizaRing/libs'.
+Writing mtb file for asset 'lwip-freertos-integration' to the folder 'C:/Users/mnb51/mtw/AlizaRing/libs'.
+Writing mtb file for asset 'lwip-network-interface-integration' to the folder 'C:/Users/mnb51/mtw/AlizaRing/libs'.
+Writing mtb file for asset 'lwip' to the folder 'C:/Users/mnb51/mtw/AlizaRing/libs'.
+Writing mtb file for asset 'mbedtls' to the folder 'C:/Users/mnb51/mtw/AlizaRing/libs'.
+Writing mtb file for asset 'secure-sockets' to the folder 'C:/Users/mnb51/mtw/AlizaRing/libs'.
+Writing mtb file for asset 'whd-bsp-integration' to the folder 'C:/Users/mnb51/mtw/AlizaRing/libs'.
+Writing mtb file for asset 'wifi-connection-manager' to the folder 'C:/Users/mnb51/mtw/AlizaRing/libs'.
+Writing mtb file for asset 'wifi-host-driver' to the folder 'C:/Users/mnb51/mtw/AlizaRing/libs'.
+Writing mtb file for asset 'wpa3-external-supplicant' to the folder 'C:/Users/mnb51/mtw/AlizaRing/libs'.
+Starting to fetch assets for the project directory 'C:/Users/mnb51/mtw/AlizaRing'.
+Starting: git -C C:/Users/mnb51/mtw/AlizaRing/libs/cyberon-dspotter-lib-psoc6-cm4 config remote.origin.fetch 'refs/heads/*:refs/heads/*'
+Starting: git -C C:/Users/mnb51/mtw/mtb_shared/retarget-io/release-v1.3.0 config remote.origin.fetch 'refs/heads/*:refs/heads/*'
+Starting: git -C C:/Users/mnb51/mtw/mtb_shared/wifi-core-freertos-lwip-mbedtls/release-v1.0.0 config remote.origin.fetch 'refs/heads/*:refs/heads/*'
+Starting: git -C C:/Users/mnb51/mtw/mtb_shared/cat1cm0p/release-v1.0.0 config remote.origin.fetch 'refs/heads/*:refs/heads/*'
+Starting: git -C C:/Users/mnb51/mtw/mtb_shared/cmsis/release-v5.8.0 config remote.origin.fetch 'refs/heads/*:refs/heads/*'
+Starting: git -C C:/Users/mnb51/mtw/mtb_shared/core-lib/release-v1.3.1 config remote.origin.fetch 'refs/heads/*:refs/heads/*'
+Starting: git -C C:/Users/mnb51/mtw/mtb_shared/core-make/release-v3.2.1 config remote.origin.fetch 'refs/heads/*:refs/heads/*'
+Success: git -C C:/Users/mnb51/mtw/mtb_shared/retarget-io/release-v1.3.0 config remote.origin.fetch 'refs/heads/*:refs/heads/*'
+Starting: git -C C:/Users/mnb51/mtw/mtb_shared/mtb-hal-cat1/release-v2.3.0 config remote.origin.fetch 'refs/heads/*:refs/heads/*'
+Success: git -C C:/Users/mnb51/mtw/AlizaRing/libs/cyberon-dspotter-lib-psoc6-cm4 config remote.origin.fetch 'refs/heads/*:refs/heads/*'
+Success: git -C C:/Users/mnb51/mtw/mtb_shared/cat1cm0p/release-v1.0.0 config remote.origin.fetch 'refs/heads/*:refs/heads/*'
+Success: git -C C:/Users/mnb51/mtw/mtb_shared/wifi-core-freertos-lwip-mbedtls/release-v1.0.0 config remote.origin.fetch 'refs/heads/*:refs/heads/*'
+Success: git -C C:/Users/mnb51/mtw/mtb_shared/cmsis/release-v5.8.0 config remote.origin.fetch 'refs/heads/*:refs/heads/*'
+Starting: git -C C:/Users/mnb51/mtw/mtb_shared/mtb-pdl-cat1/release-v3.3.1 config remote.origin.fetch 'refs/heads/*:refs/heads/*'
+Starting: git -C C:/Users/mnb51/mtw/mtb_shared/recipe-make-cat1a/release-v2.1.1 config remote.origin.fetch 'refs/heads/*:refs/heads/*'
+Starting: git -C C:/Users/mnb51/mtw/mtb_shared/abstraction-rtos/release-v1.7.1 config remote.origin.fetch 'refs/heads/*:refs/heads/*'
+Starting: git -C C:/Users/mnb51/mtw/mtb_shared/clib-support/release-v1.3.0 config remote.origin.fetch 'refs/heads/*:refs/heads/*'
+Success: git -C C:/Users/mnb51/mtw/mtb_shared/core-lib/release-v1.3.1 config remote.origin.fetch 'refs/heads/*:refs/heads/*'
+Success: git -C C:/Users/mnb51/mtw/mtb_shared/core-make/release-v3.2.1 config remote.origin.fetch 'refs/heads/*:refs/heads/*'
+Starting: git -C C:/Users/mnb51/mtw/mtb_shared/connectivity-utilities/release-v4.1.1 config remote.origin.fetch 'refs/heads/*:refs/heads/*'
+Starting: git -C C:/Users/mnb51/mtw/mtb_shared/cy-mbedtls-acceleration/release-v1.5.0 config remote.origin.fetch 'refs/heads/*:refs/heads/*'
+Success: git -C C:/Users/mnb51/mtw/mtb_shared/mtb-hal-cat1/release-v2.3.0 config remote.origin.fetch 'refs/heads/*:refs/heads/*'
+Starting: git -C C:/Users/mnb51/mtw/mtb_shared/freertos/release-v10.4.305 config remote.origin.fetch 'refs/heads/*:refs/heads/*'
+Success: git -C C:/Users/mnb51/mtw/mtb_shared/mtb-pdl-cat1/release-v3.3.1 config remote.origin.fetch 'refs/heads/*:refs/heads/*'
+Starting: git -C C:/Users/mnb51/mtw/mtb_shared/lwip-freertos-integration/release-v1.0.0 config remote.origin.fetch 'refs/heads/*:refs/heads/*'
+Success: git -C C:/Users/mnb51/mtw/mtb_shared/recipe-make-cat1a/release-v2.1.1 config remote.origin.fetch 'refs/heads/*:refs/heads/*'
+Starting: git -C C:/Users/mnb51/mtw/mtb_shared/lwip-network-interface-integration/release-v1.1.2 config remote.origin.fetch 'refs/heads/*:refs/heads/*'
+Success: git -C C:/Users/mnb51/mtw/mtb_shared/abstraction-rtos/release-v1.7.1 config remote.origin.fetch 'refs/heads/*:refs/heads/*'
+Success: git -C C:/Users/mnb51/mtw/mtb_shared/clib-support/release-v1.3.0 config remote.origin.fetch 'refs/heads/*:refs/heads/*'
+Starting: git -C C:/Users/mnb51/mtw/mtb_shared/lwip/STABLE-2_1_2_RELEASE config remote.origin.fetch 'refs/heads/*:refs/heads/*'
+Starting: git -C C:/Users/mnb51/mtw/mtb_shared/mbedtls/mbedtls-2.25.0 config remote.origin.fetch 'refs/heads/*:refs/heads/*'
+Success: git -C C:/Users/mnb51/mtw/mtb_shared/connectivity-utilities/release-v4.1.1 config remote.origin.fetch 'refs/heads/*:refs/heads/*'
+Starting: git -C C:/Users/mnb51/mtw/mtb_shared/secure-sockets/release-v3.2.1 config remote.origin.fetch 'refs/heads/*:refs/heads/*'
+Success: git -C C:/Users/mnb51/mtw/mtb_shared/cy-mbedtls-acceleration/release-v1.5.0 config remote.origin.fetch 'refs/heads/*:refs/heads/*'
+Starting: git -C C:/Users/mnb51/mtw/mtb_shared/whd-bsp-integration/release-v2.2.0 config remote.origin.fetch 'refs/heads/*:refs/heads/*'
+Success: git -C C:/Users/mnb51/mtw/mtb_shared/lwip-freertos-integration/release-v1.0.0 config remote.origin.fetch 'refs/heads/*:refs/heads/*'
+Starting: git -C C:/Users/mnb51/mtw/mtb_shared/wifi-connection-manager/release-v3.1.0 config remote.origin.fetch 'refs/heads/*:refs/heads/*'
+Success: git -C C:/Users/mnb51/mtw/mtb_shared/freertos/release-v10.4.305 config remote.origin.fetch 'refs/heads/*:refs/heads/*'
+Success: git -C C:/Users/mnb51/mtw/mtb_shared/lwip-network-interface-integration/release-v1.1.2 config remote.origin.fetch 'refs/heads/*:refs/heads/*'
+Starting: git -C C:/Users/mnb51/mtw/mtb_shared/wifi-host-driver/release-v2.6.0 config remote.origin.fetch 'refs/heads/*:refs/heads/*'
+Starting: git -C C:/Users/mnb51/mtw/mtb_shared/wpa3-external-supplicant/release-v1.1.0 config remote.origin.fetch 'refs/heads/*:refs/heads/*'
+Success: git -C C:/Users/mnb51/mtw/mtb_shared/lwip/STABLE-2_1_2_RELEASE config remote.origin.fetch 'refs/heads/*:refs/heads/*'
+Starting: git -C C:/Users/mnb51/mtw/mtb_shared/retarget-io/release-v1.3.0 fetch cypress --tags --force --quiet
+Success: git -C C:/Users/mnb51/mtw/mtb_shared/mbedtls/mbedtls-2.25.0 config remote.origin.fetch 'refs/heads/*:refs/heads/*'
+Success: git -C C:/Users/mnb51/mtw/mtb_shared/secure-sockets/release-v3.2.1 config remote.origin.fetch 'refs/heads/*:refs/heads/*'
+Starting: git -C C:/Users/mnb51/mtw/AlizaRing/libs/cyberon-dspotter-lib-psoc6-cm4 fetch cypress --tags --force --quiet
+Starting: git -C C:/Users/mnb51/mtw/mtb_shared/cat1cm0p/release-v1.0.0 fetch cypress --tags --force --quiet
+Success: git -C C:/Users/mnb51/mtw/mtb_shared/whd-bsp-integration/release-v2.2.0 config remote.origin.fetch 'refs/heads/*:refs/heads/*'
+Starting: git -C C:/Users/mnb51/mtw/mtb_shared/wifi-core-freertos-lwip-mbedtls/release-v1.0.0 fetch cypress --tags --force --quiet
+Success: git -C C:/Users/mnb51/mtw/mtb_shared/wifi-connection-manager/release-v3.1.0 config remote.origin.fetch 'refs/heads/*:refs/heads/*'
+Starting: git -C C:/Users/mnb51/mtw/mtb_shared/cmsis/release-v5.8.0 fetch cypress --tags --force --quiet
+Success: git -C C:/Users/mnb51/mtw/mtb_shared/wpa3-external-supplicant/release-v1.1.0 config remote.origin.fetch 'refs/heads/*:refs/heads/*'
+Starting: git -C C:/Users/mnb51/mtw/mtb_shared/core-lib/release-v1.3.1 fetch cypress --tags --force --quiet
+Success: git -C C:/Users/mnb51/mtw/mtb_shared/wifi-host-driver/release-v2.6.0 config remote.origin.fetch 'refs/heads/*:refs/heads/*'
+Starting: git -C C:/Users/mnb51/mtw/mtb_shared/core-make/release-v3.2.1 fetch cypress --tags --force --quiet
+Success: git -C C:/Users/mnb51/mtw/mtb_shared/cat1cm0p/release-v1.0.0 fetch cypress --tags --force --quiet
+Starting: git -C C:/Users/mnb51/mtw/mtb_shared/mtb-hal-cat1/release-v2.3.0 fetch cypress --tags --force --quiet
+Success: git -C C:/Users/mnb51/mtw/mtb_shared/retarget-io/release-v1.3.0 fetch cypress --tags --force --quiet
+Starting: git -C C:/Users/mnb51/mtw/mtb_shared/mtb-pdl-cat1/release-v3.3.1 fetch cypress --tags --force --quiet
+Success: git -C C:/Users/mnb51/mtw/mtb_shared/core-make/release-v3.2.1 fetch cypress --tags --force --quiet
+Starting: git -C C:/Users/mnb51/mtw/mtb_shared/recipe-make-cat1a/release-v2.1.1 fetch cypress --tags --force --quiet
+Success: git -C C:/Users/mnb51/mtw/mtb_shared/core-lib/release-v1.3.1 fetch cypress --tags --force --quiet
+Starting: git -C C:/Users/mnb51/mtw/mtb_shared/abstraction-rtos/release-v1.7.1 fetch cypress --tags --force --quiet
+Success: git -C C:/Users/mnb51/mtw/mtb_shared/cmsis/release-v5.8.0 fetch cypress --tags --force --quiet
+Success: git -C C:/Users/mnb51/mtw/mtb_shared/wifi-core-freertos-lwip-mbedtls/release-v1.0.0 fetch cypress --tags --force --quiet
+Starting: git -C C:/Users/mnb51/mtw/mtb_shared/clib-support/release-v1.3.0 fetch cypress --tags --force --quiet
+Starting: git -C C:/Users/mnb51/mtw/mtb_shared/connectivity-utilities/release-v4.1.1 fetch cypress --tags --force --quiet
+Success: git -C C:/Users/mnb51/mtw/AlizaRing/libs/cyberon-dspotter-lib-psoc6-cm4 fetch cypress --tags --force --quiet
+Starting: git -C C:/Users/mnb51/mtw/mtb_shared/cy-mbedtls-acceleration/release-v1.5.0 fetch cypress --tags --force --quiet
+Success: git -C C:/Users/mnb51/mtw/mtb_shared/mtb-hal-cat1/release-v2.3.0 fetch cypress --tags --force --quiet
+Starting: git -C C:/Users/mnb51/mtw/mtb_shared/lwip-freertos-integration/release-v1.0.0 fetch cypress --tags --force --quiet
+Success: git -C C:/Users/mnb51/mtw/mtb_shared/recipe-make-cat1a/release-v2.1.1 fetch cypress --tags --force --quiet
+Starting: git -C C:/Users/mnb51/mtw/mtb_shared/freertos/release-v10.4.305 fetch cypress --tags --force --quiet
+Success: git -C C:/Users/mnb51/mtw/mtb_shared/mtb-pdl-cat1/release-v3.3.1 fetch cypress --tags --force --quiet
+Starting: git -C C:/Users/mnb51/mtw/mtb_shared/lwip-network-interface-integration/release-v1.1.2 fetch cypress --tags --force --quiet
+Success: git -C C:/Users/mnb51/mtw/mtb_shared/abstraction-rtos/release-v1.7.1 fetch cypress --tags --force --quiet
+Starting: git -C C:/Users/mnb51/mtw/mtb_shared/lwip/STABLE-2_1_2_RELEASE fetch cypress --tags --force --quiet
+Success: git -C C:/Users/mnb51/mtw/mtb_shared/connectivity-utilities/release-v4.1.1 fetch cypress --tags --force --quiet
+Starting: git -C C:/Users/mnb51/mtw/mtb_shared/mbedtls/mbedtls-2.25.0 fetch cypress --tags --force --quiet
+Success: git -C C:/Users/mnb51/mtw/mtb_shared/clib-support/release-v1.3.0 fetch cypress --tags --force --quiet
+Starting: git -C C:/Users/mnb51/mtw/mtb_shared/secure-sockets/release-v3.2.1 fetch cypress --tags --force --quiet
+Success: git -C C:/Users/mnb51/mtw/mtb_shared/cy-mbedtls-acceleration/release-v1.5.0 fetch cypress --tags --force --quiet
+Starting: git -C C:/Users/mnb51/mtw/mtb_shared/whd-bsp-integration/release-v2.2.0 fetch cypress --tags --force --quiet
+Success: git -C C:/Users/mnb51/mtw/mtb_shared/lwip-freertos-integration/release-v1.0.0 fetch cypress --tags --force --quiet
+Starting: git -C C:/Users/mnb51/mtw/mtb_shared/wifi-connection-manager/release-v3.1.0 fetch cypress --tags --force --quiet
+Success: git -C C:/Users/mnb51/mtw/mtb_shared/freertos/release-v10.4.305 fetch cypress --tags --force --quiet
+Starting: git -C C:/Users/mnb51/mtw/mtb_shared/wpa3-external-supplicant/release-v1.1.0 fetch cypress --tags --force --quiet
+Success: git -C C:/Users/mnb51/mtw/mtb_shared/lwip-network-interface-integration/release-v1.1.2 fetch cypress --tags --force --quiet
+Starting: git -C C:/Users/mnb51/mtw/mtb_shared/wifi-host-driver/release-v2.6.0 fetch cypress --tags --force --quiet
+Success: git -C C:/Users/mnb51/mtw/mtb_shared/secure-sockets/release-v3.2.1 fetch cypress --tags --force --quiet
+Starting: git -C C:/Users/mnb51/mtw/mtb_shared/cat1cm0p/release-v1.0.0 checkout release-v1.0.0
+Success: git -C C:/Users/mnb51/mtw/mtb_shared/whd-bsp-integration/release-v2.2.0 fetch cypress --tags --force --quiet
+Starting: git -C C:/Users/mnb51/mtw/mtb_shared/retarget-io/release-v1.3.0 checkout release-v1.3.0
+HEAD is now at b3d4b82 Upload cat1cm0p 1.0.0.148
+Success: git -C C:/Users/mnb51/mtw/mtb_shared/cat1cm0p/release-v1.0.0 checkout release-v1.0.0
+Finished processing cat1cm0p
+Starting: git -C C:/Users/mnb51/mtw/mtb_shared/core-make/release-v3.2.1 checkout release-v3.2.1
+HEAD is now at a61cd7c Upload retarget-io 1.3.0.25183
+Success: git -C C:/Users/mnb51/mtw/mtb_shared/retarget-io/release-v1.3.0 checkout release-v1.3.0
+Finished processing retarget-io
+Starting: git -C C:/Users/mnb51/mtw/mtb_shared/core-lib/release-v1.3.1 checkout release-v1.3.1
+HEAD is now at 9f77900 Upload core-make 3.2.1.4648 [1380]
+Success: git -C C:/Users/mnb51/mtw/mtb_shared/core-make/release-v3.2.1 checkout release-v3.2.1
+Finished processing core-make
+Starting: git -C C:/Users/mnb51/mtw/mtb_shared/cmsis/release-v5.8.0 checkout release-v5.8.0
+HEAD is now at 1c1cb8a Upload core-lib 1.3.1.29660
+Success: git -C C:/Users/mnb51/mtw/mtb_shared/core-lib/release-v1.3.1 checkout release-v1.3.1
+Finished processing core-lib
+Starting: git -C C:/Users/mnb51/mtw/mtb_shared/wifi-core-freertos-lwip-mbedtls/release-v1.0.0 checkout release-v1.0.0
+HEAD is now at be86442 Upload wifi-core-freertos-lwip-mbedtls 1.0.0.67
+HEAD is now at ce02f64 Upload cmsis 5.8.0.50
+Success: git -C C:/Users/mnb51/mtw/mtb_shared/cmsis/release-v5.8.0 checkout release-v5.8.0
+Finished processing cmsis
+Success: git -C C:/Users/mnb51/mtw/mtb_shared/wifi-core-freertos-lwip-mbedtls/release-v1.0.0 checkout release-v1.0.0
+Finished processing wifi-core-freertos-lwip-mbedtls
+Starting: git -C C:/Users/mnb51/mtw/AlizaRing/libs/cyberon-dspotter-lib-psoc6-cm4 checkout release-v1.0
+Starting: git -C C:/Users/mnb51/mtw/mtb_shared/mtb-hal-cat1/release-v2.3.0 checkout release-v2.3.0
+HEAD is now at 1382a7d Update EULA
+Success: git -C C:/Users/mnb51/mtw/AlizaRing/libs/cyberon-dspotter-lib-psoc6-cm4 checkout release-v1.0
+Finished processing cyberon-dspotter-lib-psoc6-cm4
+Starting: git -C C:/Users/mnb51/mtw/mtb_shared/recipe-make-cat1a/release-v2.1.1 checkout release-v2.1.1
+HEAD is now at b62baf5 Upload mtb-hal-cat1 [990]
+Success: git -C C:/Users/mnb51/mtw/mtb_shared/mtb-hal-cat1/release-v2.3.0 checkout release-v2.3.0
+Finished processing mtb-hal-cat1
+Starting: git -C C:/Users/mnb51/mtw/mtb_shared/mtb-pdl-cat1/release-v3.3.1 checkout release-v3.3.1
+HEAD is now at 9cbdee3 Upload recipe-make-cat1a 2.1.1.4648 [1380]
+Success: git -C C:/Users/mnb51/mtw/mtb_shared/recipe-make-cat1a/release-v2.1.1 checkout release-v2.1.1
+Finished processing recipe-make-cat1a
+Starting: git -C C:/Users/mnb51/mtw/mtb_shared/abstraction-rtos/release-v1.7.1 checkout release-v1.7.1
+HEAD is now at 72bc31c Upload abstraction-rtos [404]
+Success: git -C C:/Users/mnb51/mtw/mtb_shared/abstraction-rtos/release-v1.7.1 checkout release-v1.7.1
+Finished processing abstraction-rtos
+Starting: git -C C:/Users/mnb51/mtw/mtb_shared/connectivity-utilities/release-v4.1.1 checkout release-v4.1.1
+HEAD is now at 1186239 Upload connectivity-utilities 4.1.1.1360 [999]
+Success: git -C C:/Users/mnb51/mtw/mtb_shared/connectivity-utilities/release-v4.1.1 checkout release-v4.1.1
+Finished processing connectivity-utilities
+Starting: git -C C:/Users/mnb51/mtw/mtb_shared/clib-support/release-v1.3.0 checkout release-v1.3.0
+Success: git -C C:/Users/mnb51/mtw/mtb_shared/lwip/STABLE-2_1_2_RELEASE fetch cypress --tags --force --quiet
+Starting: git -C C:/Users/mnb51/mtw/mtb_shared/cy-mbedtls-acceleration/release-v1.5.0 checkout release-v1.5.0
+HEAD is now at d3e0bca Upload clib-support 1.3.0.29736
+Success: git -C C:/Users/mnb51/mtw/mtb_shared/clib-support/release-v1.3.0 checkout release-v1.3.0
+Finished processing clib-support
+Starting: git -C C:/Users/mnb51/mtw/mtb_shared/lwip-freertos-integration/release-v1.0.0 checkout release-v1.0.0
+HEAD is now at 8ed7d45 Upload mtb-pdl-cat1 3.3.1.23506 [1188]
+Success: git -C C:/Users/mnb51/mtw/mtb_shared/wifi-connection-manager/release-v3.1.0 fetch cypress --tags --force --quiet
+Starting: git -C C:/Users/mnb51/mtw/mtb_shared/freertos/release-v10.4.305 checkout release-v10.4.305
+Success: git -C C:/Users/mnb51/mtw/mtb_shared/mtb-pdl-cat1/release-v3.3.1 checkout release-v3.3.1
+Finished processing mtb-pdl-cat1
+Starting: git -C C:/Users/mnb51/mtw/mtb_shared/lwip-network-interface-integration/release-v1.1.2 checkout release-v1.1.2
+Success: git -C C:/Users/mnb51/mtw/mtb_shared/wpa3-external-supplicant/release-v1.1.0 fetch cypress --tags --force --quiet
+Starting: git -C C:/Users/mnb51/mtw/mtb_shared/secure-sockets/release-v3.2.1 checkout release-v3.2.1
+HEAD is now at 6c124c2 Upload cy-mbedtls-acceleration 1.5.0.1040 [982]
+Success: git -C C:/Users/mnb51/mtw/mtb_shared/cy-mbedtls-acceleration/release-v1.5.0 checkout release-v1.5.0
+Finished processing cy-mbedtls-acceleration
+Starting: git -C C:/Users/mnb51/mtw/mtb_shared/whd-bsp-integration/release-v2.2.0 checkout release-v2.2.0
+HEAD is now at f4797e9 Upload lwip-freertos-integration 1.0.0.19
+Success: git -C C:/Users/mnb51/mtw/mtb_shared/lwip-freertos-integration/release-v1.0.0 checkout release-v1.0.0
+Finished processing lwip-freertos-integration
+Starting: git -C C:/Users/mnb51/mtw/mtb_shared/lwip/STABLE-2_1_2_RELEASE checkout STABLE-2_1_2_RELEASE
+HEAD is now at e51b176 Upload lwip-network-interface-integration 1.1.2.268 [1085]
+HEAD is now at a63f9d3 Upload whd-bsp-integration [990]
+Success: git -C C:/Users/mnb51/mtw/mtb_shared/lwip-network-interface-integration/release-v1.1.2 checkout release-v1.1.2
+Finished processing lwip-network-interface-integration
+Starting: git -C C:/Users/mnb51/mtw/mtb_shared/wifi-connection-manager/release-v3.1.0 checkout release-v3.1.0
+Success: git -C C:/Users/mnb51/mtw/mtb_shared/whd-bsp-integration/release-v2.2.0 checkout release-v2.2.0
+Finished processing whd-bsp-integration
+Starting: git -C C:/Users/mnb51/mtw/mtb_shared/wpa3-external-supplicant/release-v1.1.0 checkout release-v1.1.0
+HEAD is now at 085ab13 Upload freertos 10.4.305.482 [103]
+HEAD is now at 07032e5 Upload secure-sockets 3.2.1.2415 [999]
+Success: git -C C:/Users/mnb51/mtw/mtb_shared/freertos/release-v10.4.305 checkout release-v10.4.305
+Finished processing freertos
+Success: git -C C:/Users/mnb51/mtw/mtb_shared/secure-sockets/release-v3.2.1 checkout release-v3.2.1
+Finished processing secure-sockets
+HEAD is now at ca71f1d Upload wpa3-external-supplicant 1.1.0.98
+Success: git -C C:/Users/mnb51/mtw/mtb_shared/wpa3-external-supplicant/release-v1.1.0 checkout release-v1.1.0
+Finished processing wpa3-external-supplicant
+Success: git -C C:/Users/mnb51/mtw/mtb_shared/mbedtls/mbedtls-2.25.0 fetch cypress --tags --force --quiet
+Starting: git -C C:/Users/mnb51/mtw/mtb_shared/mbedtls/mbedtls-2.25.0 checkout mbedtls-2.25.0
+HEAD is now at 159e31b6 Prepare 2.1.2 release
+HEAD is now at 513bd0f Upload wifi-connection-manager 3.1.0.1923 [999]
+Success: git -C C:/Users/mnb51/mtw/mtb_shared/lwip/STABLE-2_1_2_RELEASE checkout STABLE-2_1_2_RELEASE
+Finished processing lwip
+Success: git -C C:/Users/mnb51/mtw/mtb_shared/wifi-connection-manager/release-v3.1.0 checkout release-v3.1.0
+Finished processing wifi-connection-manager
+Success: git -C C:/Users/mnb51/mtw/mtb_shared/wifi-host-driver/release-v2.6.0 fetch cypress --tags --force --quiet
+Starting: git -C C:/Users/mnb51/mtw/mtb_shared/wifi-host-driver/release-v2.6.0 checkout release-v2.6.0
+HEAD is now at 1c54b5410 Merge pull request #786 from ARMmbed/dev/yanesca/mbedtls-2.25.0r0-pr
+HEAD is now at c04fcbb Upload wifi-host-driver 2.6.0.18446 [997]
+Success: git -C C:/Users/mnb51/mtw/mtb_shared/mbedtls/mbedtls-2.25.0 checkout mbedtls-2.25.0
+Finished processing mbedtls
+Success: git -C C:/Users/mnb51/mtw/mtb_shared/wifi-host-driver/release-v2.6.0 checkout release-v2.6.0
+Finished processing wifi-host-driver
+Fetched all assets for the project directory 'C:/Users/mnb51/mtw/AlizaRing'.
+Writing the file 'C:/Users/mnb51/mtw/AlizaRing/libs/app.mk'.
+Successfully committed changes to the project 'cyberon-voice-trigger-and-command-demo-psoc6-cm4'.
+0 error(s), 0 warning(s)
+Successfully updated application "AlizaRing"
+Updating Launch Configurations ...
+Calling "make eclipse" ...
+Tools Directory: C:/Users/mnb51/ModusToolbox/tools_3.0
+Searching installed tools in progress...
+Searching installed tools complete
+Initializing build: cyberon-voice-trigger-and-command-demo-psoc6-cm4 Debug APP_CY8CKIT-062S2-43012 GCC_ARM
+Prebuild operations complete
+Auto-discovery in progress...
+Auto-discovery complete
+Commencing build operations...
+Tools Directory: C:/Users/mnb51/ModusToolbox/tools_3.0
+Constructing build rules...
+Build rules construction complete
+==============================================================================
+= Generating IDE files =
+==============================================================================
+Generated C:/Users/mnb51/mtw/AlizaRing/.mtbLaunchConfigs/AlizaRing Attach (JLink).launch
+Generated C:/Users/mnb51/mtw/AlizaRing/.mtbLaunchConfigs/AlizaRing Attach (KitProg3_MiniProg4).launch
+Generated C:/Users/mnb51/mtw/AlizaRing/.mtbLaunchConfigs/AlizaRing Debug (JLink).launch
+Generated C:/Users/mnb51/mtw/AlizaRing/.mtbLaunchConfigs/AlizaRing Debug (KitProg3_MiniProg4).launch
+Generated C:/Users/mnb51/mtw/AlizaRing/.mtbLaunchConfigs/AlizaRing Erase (JLink).launch
+Generated C:/Users/mnb51/mtw/AlizaRing/.mtbLaunchConfigs/AlizaRing Erase (KitProg3_MiniProg4).launch
+Generated C:/Users/mnb51/mtw/AlizaRing/.mtbLaunchConfigs/AlizaRing Program (JLink).launch
+Generated C:/Users/mnb51/mtw/AlizaRing/.mtbLaunchConfigs/AlizaRing Program (KitProg3_MiniProg4).launch
+INFO: The C:/Users/mnb51/mtw/AlizaRing/.project already exist and will not be regenerated
+INFO: The C:/Users/mnb51/mtw/AlizaRing/.cproject already exist and will not be regenerated
+Instructions:
+1. Open Eclipse IDE for ModusToolbox
+2. Select 'Import Existing Application In-Place' from the QuickPanel
+3. Browse to the application root directory
+"make eclipse" succeeded
+
+Starting to refresh dependencies for project 'cyberon-voice-trigger-and-command-demo-psoc6-cm4'.
+Requested to remove the asset 'abstraction-rtos'.
+Requested to remove the asset 'cat1cm0p'.
+Requested to remove the asset 'clib-support'.
+Requested to remove the asset 'cmsis'.
+Requested to remove the asset 'connectivity-utilities'.
+Requested to remove the asset 'core-lib'.
+Requested to remove the asset 'core-make'.
+Requested to remove the asset 'cy-mbedtls-acceleration'.
+Requested to remove the asset 'freertos'.
+Requested to remove the asset 'lwip-freertos-integration'.
+Requested to remove the asset 'lwip-network-interface-integration'.
+Requested to remove the asset 'lwip'.
+Requested to remove the asset 'mbedtls'.
+Requested to remove the asset 'mtb-hal-cat1'.
+Requested to remove the asset 'mtb-pdl-cat1'.
+Requested to remove the asset 'recipe-make-cat1a'.
+Requested to remove the asset 'secure-sockets'.
+Requested to remove the asset 'whd-bsp-integration'.
+Requested to remove the asset 'wifi-connection-manager'.
+Requested to remove the asset 'wifi-host-driver'.
+Requested to remove the asset 'wpa3-external-supplicant'.
+Requested to add the asset 'cat1cm0p'.
+Requested to add the asset 'core-lib'.
+Requested to add the asset 'core-make'.
+Requested to add the asset 'mtb-hal-cat1'.
+Requested to add the asset 'mtb-pdl-cat1'.
+Requested to add the asset 'recipe-make-cat1a'.
+Requested to add the asset 'abstraction-rtos'.
+Requested to add the asset 'clib-support'.
+Requested to add the asset 'connectivity-utilities'.
+Requested to add the asset 'mbedTLS Acceleration'.
+Requested to add the asset 'freertos'.
+Requested to add the asset 'lwip-freertos-integration'.
+Requested to add the asset 'lwip-network-interface-integration'.
+Requested to add the asset 'lwip'.
+Requested to add the asset 'mbedtls'.
+Requested to add the asset 'secure-sockets'.
+Requested to add the asset 'whd-bsp-integration'.
+Requested to add the asset 'wifi-connection-manager'.
+Requested to add the asset 'wifi-host-driver'.
+Requested to add the asset 'wpa3-external-supplicant'.
+Requested to add the asset 'cmsis'.
+Found direct dependencies 'cyberon-dspotter-lib-psoc6-cm4, retarget-io, wifi-core-freertos-lwip-mbedtls'.
+Found new indirect dependencies 'cat1cm0p, core-lib, core-make, mtb-hal-cat1, mtb-pdl-cat1, recipe-make-cat1a, abstraction-rtos, clib-support, connectivity-utilities, mbedTLS Acceleration, freertos, lwip-freertos-integration, lwip-network-interface-integration, lwip, mbedtls, secure-sockets, whd-bsp-integration, wifi-connection-manager, wifi-host-driver, wpa3-external-supplicant, cmsis'.
+Refreshed all dependencies for project 'cyberon-voice-trigger-and-command-demo-psoc6-cm4'.
