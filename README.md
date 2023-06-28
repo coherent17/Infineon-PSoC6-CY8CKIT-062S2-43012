@@ -1603,7 +1603,13 @@ void cyberon_asr_process(short *lpsSample, int nNumSample)
 ## Wifi
 幾個重點:
 *    softAP全部刪掉，使用STA
-*    更改WIFI_SSID WIFI_PASSWORD WIFI_SECURITY_TYPE (iphone是WPA
+*    更改WIFI_SSID WIFI_PASSWORD WIFI_SECURITY_TYPE (iphone是WPA3)
+
+![](https://hackmd.io/_uploads/ByJSkOKdh.png)
+
+try:CY_WCM_SECURITY_WPA2_AES_PSK
+
+
 
 ### Ping Google DNS server IP 8.8.8.8 port 53
 ```clike=
@@ -1618,3 +1624,221 @@ if(result == CY_RSLT_SUCCESS){
 ```
 結果: 有成功ping到他
 ![](https://hackmd.io/_uploads/BkkWKRUd3.png)
+
+## Integrate WiFi & Voice Recongnition
+*    先看wifi需要甚麼library:
+![](https://hackmd.io/_uploads/BJuRNguO3.png)
+要多裝: wifi-core-freertos-lwip-mbed(從library manager)
+
+*    多加入需要的file
+        *    FreeRTOSConfig.h
+        *    lwipipts.h
+        *    mbedtls_user_config.h
+        *    wifi_config.h
+
+*    更改makefile
+
+COMPONENTS=FREERTOS LWIP MBEDTLS
+DEFINES+=MBEDTLS_USER_CONFIG_FILE='"mbedtls_user_config.h"'
+DEFINES+=CYBSP_WIFI_CAPABLE
+
+原本整合在一起時，因為EABLE了freertos，因此原本的語音辨識也需要包成task，與tcp_client一同進行task的排程。
+
+*    將語音辨識與wifi連線+socket server連線包成task，使用scheduler去排程 [已完成]
+*    需要研究的部分為: 因為task與task間為獨立的，如何讓task間溝通及兩個task間priority的設計。[關鍵的部分]
+
+## RTOS 再次研究
+基本上就是將function獨立出來，使用RTOS讓他協助排程或是觸發事件。
+
+### Thread/Task:
+*    thread有三種狀態: idle, halted, running.
+*    Higher priority tasks will be prioritized to run before lower priority tasks.
+
+### Queues:
+*    可以安全的讓thread與thread間溝通。
+*    當一個thread要讀東西，但是queue裡面是空的，那這個task將會等到有東西被放入queue後才可以繼續執行。
+
+### Semaphores:
+*    就是一個flag(unsigned int)
+*    set/give a semaphore時，數值會增加
+*    get/take a semaphore時，數值會減少
+*    當數值為0時，thread會暫停直到semaphore被set
+*    可用於不同thread中告訴別人某事已經完成
+*    例子:
+For instance, you could have a collectDataThread that reads data from a sensor and a sendData thread that sends the data up to the cloud. The sendData thread would "get" the semaphore which will suspend the thread UNTIL the collectDataThread "sets" the semaphore when it has new data available that needs to be sent.
+
+### Mutexes:
+基本上就是一個鎖，用來限制不同thread間隊共同資源的存取，以避免race condition的事情發生。
+
+### 如何使用FreeRTOS in MTB
+*    1. library manager安裝FreeRTOS library
+*    2. 在makefile COMPONENT多加上 FREETOS RTOS_AWARE
+*    3. copy FreeRTOSConfig.h到root dir
+*    4. 移除#warning line
+*    5. coding template
+
+```clike=
+//Add the required header files:
+#include "FreeRTOS.h"
+#include "task.h"
+
+//Create functions for any tasks that your application requires.
+void MyFunction(void *arg)
+{
+    (void)arg;
+     /* Initialize hardware */
+     for (;;)
+     {
+     /* Do something */
+     MyActions();
+ 
+     /* Allow other tasks to execute */
+     vTaskDelay(500);
+     }
+}
+
+//Create a task for each of your functions and start the RTOS scheduler
+int main(void)
+{
+    /* Initialize the device and board peripherals */
+    if (CY_RSLT_SUCCESS != cybsp_init())
+     {
+     /* Unable to initialize BSP so HALT */
+     CY_ASSERT(0);
+     }
+     if (pdPASS == xTaskCreate(MyFunction, // Task function
+        "Task Name", // Task name
+        1024, // Task stack size        
+        NULL, // Parameters passed to task
+        5, // Task priority
+        NULL) // Task handle
+     )
+     {
+         vTaskStartScheduler();
+     }
+     /* vTaskStartScheduler should never return.
+    If we get here, then there was a serious error */
+    CY_ASSERT(0);
+}
+```
+
+### Task:
+
+prototype:
+```clike=
+BaseType_t xTaskCreate( TaskFunction_t pxTaskCode,
+    const char * const pcName,
+    const configSTACK_DEPTH_TYPE usStackDepth,
+    void * const pvParameters,
+    UBaseType_t uxPriority,
+    TaskHandle_t * const pxCreatedTask )
+```
+
+*    priority最低的為0，為idle task
+*    有最高priority的task將會優先執行，除非task被block住，否則不會停止
+*    如果兩個task有相同的priority且都沒有block住，則FreeRTOSConfig.h會share CPU
+
+### 如何Block CPU?
+*    vTaskDelay block住task，讓其他task可以被執行
+*    xQueueSend 假如要send的queue已經滿了，那就會被block住直到可以順利send出去或是timeout掉了
+*    xQueueReceive 如果要讀的queue是空的，則task將會被block住直到有東西進入queue或是timeout掉了
+*    xSemaphoreTake 當semaphore沒有被give
+
+### Queue Sample
+可以透過queue來進行task間的溝通
+```clike=
+#include "FreeRTOS.h"
+#include "task.h"
+#include "queue.h"
+#include "stdio.h"
+// Global Queue Handle
+static QueueHandle_t qh = 0;
+
+void task_tx(void *p)
+{
+    int myInt = 0;
+    while (1)
+    {
+        myInt++;
+        if (!xQueueSend(qh, &myInt, pdMS_TO_TICKS(500)))
+         {
+             puts("Failed to send item to queue within 500ms");
+         }
+     vTaskDelay(1000);
+     }
+}
+
+void task_rx(void *p)
+{
+    int myInt = 0;
+    while (1)
+    {
+        if (!xQueueReceive(qh, &myInt, pdMS_TO_TICKS(10000)))
+        {
+            puts("Failed to receive item within 10000 ms");
+        }
+        else
+        {
+        printf("Received: %u\n", myInt);
+        }
+    }
+}
+
+int main(void)
+{
+    qh = xQueueCreate(1, sizeof(int));
+    xTaskCreate(task_tx, (char *)"t1", 2048, 0, 1, 0);
+    xTaskCreate(task_rx, (char *)"t2", 2048, 0, 1, 0);
+    vTaskStartScheduler();
+    CY_ASSERT(0); // Should never get here
+}
+```
+幾個需要注意的是:
+*    要在createTask前create Queue
+*    在task_tx中，每一秒send一個東西，如果queue是滿的，則會block 500ms(timeout)
+*    在task_rx中，不需要使用vtaskDelay，因為如果queue沒有東西就會自動block住了。
+
+### Mutexes sample
+
+```clike=
+#include "FreeRTOS.h"
+#include "task.h"
+#include "semphr.h"
+static SemaphoreHandle_t spi_bus_lock=0;
+void task_one()
+{
+    while (1)
+    {
+        if (xSemaphoreTake(spi_bus_lock, 1000))
+        {
+        // Use Guarded Resource
+        // Give Semaphore back:
+        xSemaphoreGive(spi_bus_lock);
+        }
+    }
+}
+
+void task_two()
+{
+    while (1)
+    {
+        if (xSemaphoreTake(spi_bus_lock, 1000))
+        {
+        // Use Guarded Resource
+        // Give Semaphore back:
+        xSemaphoreGive(spi_bus_lock);
+        }
+    }
+}
+
+int main(void)
+{
+    spi_bus_lock = xSemaphoreCreateMutex();
+    xTaskCreate(task_one, (char *)"t1", 2048, 0, 1, 0);
+    xTaskCreate(task_two, (char *)"t2", 2048, 0, 1, 0);
+    vTaskStartScheduler();
+    CY_ASSERT(0);
+}
+```
+
+mutex只會讓一個task去進行，當其他task也進行到被mutex所住的資源將會sleep。
